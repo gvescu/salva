@@ -28,9 +28,9 @@ Salva::Application.configure do
 
       attr_config.default_normalizers = :text_line, :strip, :blank
 
-      attr_config.default_attributes = :name, :title, :abbrev, :authors, :pages, :vol, :num
-      attr_config.add_default_attribute :description, :with => :paragraph
-      attr_config.add_default_attribute :descr, :with => :paragraph
+      attr_config.default_attributes = :name, :title, :abbrev, :authors, :pages, :vol, :num, :description, :descr
+      # attr_config.add_default_attribute :description, :with => :paragraph
+      # attr_config.add_default_attribute :descr, :with => :paragraph
     end
   end
 end

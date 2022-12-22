@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(*Rails.groups)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -26,7 +26,7 @@ module Salva
 
     # Activate observers that should always be running.
     if Rails.env.production? or Rails.env.development?
-      config.active_record.observers = :user_observer, :document_observer, :user_article_observer
+      # config.active_record.observers = :user_observer, :document_observer, :user_article_observer
     end
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
@@ -70,6 +70,6 @@ module Salva
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
-    config.active_record.whitelist_attributes = true
+    # config.active_record.whitelist_attributes = true
   end
 end

@@ -1,4 +1,4 @@
-Squeel.configure do |config|
+# Squeel.configure do |config|
   # To load hash extensions (to allow for AND (&), OR (|), and NOT (-) against
   # hashes of conditions)
   # config.load_core_extensions :hash
@@ -8,5 +8,5 @@ Squeel.configure do |config|
   # config.load_core_extensions :symbol
 
   # To load both hash and symbol extensions
-  config.load_core_extensions :hash, :symbol
-end
+  # config.load_core_extensions :hash, :symbol
+# end

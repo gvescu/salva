@@ -3,7 +3,7 @@ namespace :salva do
   desc "To create the admin user account in the salva database"
   task :create_admin => :environment do
     password = (0...8).map{(65+rand(26)).chr}.join
-    @admin = User.create!(:login => 'admin', :email => 'admin@unam.mx', :password => password, :password => password, :userstatus_id => 2)
+    @admin = User.create!(:login => 'admin', :email => 'admin@unam.mx', :password => password, :userstatus_id => 2)
     @admin.build_user_group.group = Group.find_by_name('admin')
     if @admin.save
       puts "The admin account has been created, to enter to the system open this url http://localhost:3000/admin/"
